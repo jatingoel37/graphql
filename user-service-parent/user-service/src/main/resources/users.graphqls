@@ -1,0 +1,19 @@
+type Query {
+user(tuid: Int): User
+approvers(travelerTuid: Int): [AARelation]
+}
+
+
+
+type User {
+tuid: Int
+firstName: String
+lastName: String
+}
+
+
+type AARelation {
+approver: Int
+level: Int
+
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>edu.jgoel</groupId>
+		<artifactId>user-service-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>user-service</artifactId>
+	<name>user-service</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>edu.jgoel</groupId>
+			<artifactId>user-service-domain-models</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>edu.jgoel</groupId>
+			<artifactId>user-service-repo</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>edu.jgoel</groupId>
+			<artifactId>user-service-graphql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>2.1.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.1.3.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.0.5.RELEASE</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<mainClass>com.egencia.service.Application</mainClass>
+							<layout>JAR</layout>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>edu.user.service.Application</mainClass>
+					<layout>JAR</layout>
+					<classifier>exec</classifier>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</project>

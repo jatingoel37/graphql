@@ -1,0 +1,5 @@
+server:
+  port: 18880
+  use-forward-headers: true
+  servlet:
+    context-path: /gql-user-service
